@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Вход в Demo{% endblock %}
+
+{% block body %}
+    <div class="bg-green-50 flex flex-col items-center justify-items-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="w-80 bg-white shadow rounded-xl  mt-24 sm:max-w-md xl:p-0">
+        <div class="flex justify-center border-b p-4 items-center ">
+            <h1 class="text-lg leading-tight tracking-tight text-gray-900">
+                Вход в Demo
+            </h1>
+        </div>
+            <div class="border-b p-3">
+                <form method="post" class="">
+                    {% if error %}
+                        <div class="text-red-500 text-xs my-2">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <label for="username" class="block  text-sm  text-gray-900">Почта</label>
+                    <input type="email" value="{{ last_username }}" name="_username" id="username" class="mt-1 bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg  block w-full p-1.5 " autocomplete="email"  autofocus>
+                    <label for="password" class="block mt-4 text-sm  text-gray-900">Пароль</label>
+                    <input type="password" name="_password" id="password" class=" mt-1 bg-gray-50 border border-gray-300 outline-none text-gray-900 text-sm rounded-lg  block w-full p-1.5 " autocomplete="current-password" >
+                    <input type="hidden" name="_csrf_token"
+                        value="{{ csrf_token('authenticate') }}"
+                    >
+                    <button class="mt-4 mb-1 w-full  text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-green-300 rounded-lg text-sm  p-1.5 text-center" type="submit">
+                        Войти
+                    </button>
+                </form>
+            </div>
+            <p class="text-sm my-4 text-center font-light text-gray-500">
+                У вас еще нет аккаунта?<a href="" class=" text-blue-600 hover:underline "> Регистрация</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
