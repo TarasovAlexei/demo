@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block body %}
+    <div class="bg-green-50 flex flex-col items-center justify-items-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="w-80 bg-white  shadow-xl  rounded-xl  mt-24 sm:max-w-md xl:p-0">
+            <div class="flex justify-center border-b p-4 items-center ">
+                <h1 class=" text-lg leading-tight tracking-tight text-gray-900">
+                    Создать аккаунт
+                </h1>
+            </div>
+            <div class="border-b p-3">
+                {{ form_errors(registrationForm) }}
+                <div>
+                    {{ form_start(registrationForm, {method:'POST', attr: {class:''}},) }}
+                    <div>
+                        {{ form_label(registrationForm.firstName, null, {label_attr: {class:'block text-sm  text-gray-900'}}) }}
+                            {% if  form_errors(registrationForm.firstName) %}
+                            <span class="text-red-500 text-xs ">
+                                {{ form_errors(registrationForm.firstName) }}
+                            </span>
+                            {% endif %}
+                        {{ form_widget(registrationForm.firstName, {attr: {class:' focus:outline-none focus:border-gray-400 hover:border-gray-300 mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-1.5'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(registrationForm.lastName, null, {label_attr: {class:'mt-2 block text-sm  text-gray-900'}}) }}
+                            {% if  form_errors(registrationForm.lastName) %}
+                            <span class="text-red-500 text-xs  ">
+                                {{ form_errors(registrationForm.lastName) }}
+                            </span>
+                            {% endif %}
+                        {{ form_widget(registrationForm.lastName, {attr: {class:' focus:outline-none focus:border-gray-400 hover:border-gray-300 mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-1.5'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(registrationForm.email, null, {label_attr: {class:'block mt-2 text-sm  text-gray-900 dark:text-white'}}) }}
+                            {% if  form_errors(registrationForm.email) %}
+                            <span class="text-red-500 text-xs">
+                                {{ form_errors(registrationForm.email) }}
+                            </span>
+                            {% endif %}
+                        {{ form_widget(registrationForm.email, {attr: {class:'ease focus:outline-none focus:border-gray-400 hover:border-gray-300 mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-1.5'}}) }}
+                    </div>
+                    <div>
+                        {{ form_label(registrationForm.plainPassword, null, {label_attr: {class:'block mt-2 text-sm  text-gray-900 dark:text-white'}}) }}
+                            {% if  form_errors(registrationForm.plainPassword) %}
+                            <span class="text-red-500 text-xs">
+                                {{ form_errors(registrationForm.plainPassword) }}
+                            </span>
+                            {% endif %}
+                        {{ form_widget(registrationForm.plainPassword, {attr: {class:' focus:outline-none focus:border-gray-400 hover:border-gray-300 mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 '}}) }}
+                    </div>
+                    <button type="submit" class="mt-3 w-full text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-green-300 rounded-lg text-sm px-5 p-1.5 text-center  ">Сохранить</button>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+            <p class="text-sm my-4 text-center font-light text-gray-500">
+                У вас уже есть аккаунт?<a href="{{ path('app_login')}}" class=" text-blue-600 hover:underline "> Войти здесь</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
