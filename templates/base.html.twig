@@ -16,7 +16,7 @@
             <header>
                 <div class="bg-white border-b border-gray-100 ">
                     <div class="h-12 max-w-6xl flex  mx-auto bg-white items-center " >
-                        <div class=" max-w-52 container ">
+                        <div class=" max-w-48 container ">
                             <a href="#" class=" text-sm flex items-center p-1.5  text-gray-900 rounded-lg">
                                 <span class="whitespace-nowrap font-semibold">DEMO</span>
                             </a>
@@ -35,7 +35,7 @@
                         </div>
                         <div class="max-w-80 container flex justify-end ">
                             <div class="flex items-center ">
-                                <a href="#" class=" text-sm flex items-center p-1.5  text-gray-900 rounded-lg">
+                                <a href="#" class=" text-sm flex items-center p-1.5  text-gray-900 rounded-full">
                                     <span class="inline-block mx-1 h-7 w-7 bg-gray-300 rounded-full overflow-hidden">
                                         <svg class="size-full text-gray-100" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.12421 7.20374C9.21151 7.20374 10.093 6.32229 10.093 5.23499C10.093 4.14767 9.21151 3.26624 8.12421 3.26624C7.0369 3.26624 6.15546 4.14767 6.15546 5.23499C6.15546 6.32229 7.0369 7.20374 8.12421 7.20374Z" fill="currentColor"></path>
@@ -52,6 +52,71 @@
                 </div>
             </header>
         {% endblock %}
-        {% block body %}{% endblock %}
+        {% block body %}
+            <div class="flex flex-row max-w-6xl mx-auto ">
+                <div class="max-w-48 container flex justify-start ">
+                      <div class="mt-1">
+                        <a href="#" class=" text-sm flex items-center p-1.5  text-gray-900 rounded-lg">
+                            <svg class="size-5 text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <span class="ms-2 whitespace-nowrap">Моя страница</span>
+                        </a>
+                        <a href="#" class=" text-sm flex items-center p-1.5  text-gray-900 rounded-lg">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <span class=" ms-2 whitespace-nowrap">Друзья</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5  text-gray-900 rounded-lg ">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17h6l3 3v-3h2V9h-2M4 4h11v8H9l-3 3v-3H4V4Z" />
+                            </svg>
+                            <span class="ms-2 whitespace-nowrap">Сообщения</span>
+                            <span class="inline-flex mr-20 items-center justify-center size-5 p-2.5 ml-6 text-xs font-medium text-white bg-gray-400 rounded-full">3</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-lg ">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 9h6m-6 3h6m-6 3h6M6.996 9h.01m-.01 3h.01m-.01 3h.01M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                            </svg>
+                            <span class=" ms-2 whitespace-nowrap">Новости</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-lg ">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                            </svg>
+                            <span class=" ms-2 whitespace-nowrap">Группы</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-lg ">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M4 18V8a1 1 0 0 1 1-1h1.5l1.707-1.707A1 1 0 0 1 8.914 5h6.172a1 1 0 0 1 .707.293L17.5 7H19a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z" />
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <span class=" ms-2 whitespace-nowrap">Фотографии</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-lg">
+                            <svg class="w-5 h-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 15.5V5s3 1 3 4m-7-3H4m9 4H4m4 4H4m13 2.4c0 1.326-1.343 2.4-3 2.4s-3-1.075-3-2.4 1.343-2.4 3-2.4 3 1.075 3 2.4Z" />
+                            </svg>
+                            <span class=" ms-2 whitespace-nowrap">Музыка</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-lg">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1Zm7 11-6-2V9l6-2v10Z" />
+                            </svg>
+                            <span class="ms-2 whitespace-nowrap">Видео</span>
+                        </a>
+                        <a href="#" class="text-sm flex items-center p-1.5 text-gray-900 rounded-xl">
+                            <svg class="size-5 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                            <span class="ms-2">Настройки</span>
+                        </a>
+                    </div>
+                </div>
+                {% block main %}{% endblock %}
+            </div>
+        {% endblock %}
     </body>
 </html>
